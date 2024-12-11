@@ -88,35 +88,6 @@ const MovieDetail = () => {
         <div>
           <DetailsImages data={images} />
         </div>
-        <div className="mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7 w-full">
-            {movie.production_companies.map((item) => (
-              <div
-                key={item.id}
-                className={`${
-                  Mode ? "bg-[#cfcfcf]" : "bg-[#111111]"
-                } p-3 rounded-xl backdrop-blur-md`}
-              >
-                <p className="text-center text-lg md:text-xl mb-2">
-                  Production Company:
-                </p>
-                <div className="flex flex-col items-center">
-                  <img
-                    src={import.meta.env.VITE_IMAGE_URL + item.logo_path}
-                    alt={item.name}
-                    className="w-full max-w-[200px] h-[80px] object-contain mb-2"
-                  />
-                  <h3 className="text-center text-base md:text-lg font-semibold">
-                    {item.name}
-                  </h3>
-                  <p className="text-center text-sm md:text-base">
-                    Country: {item.origin_country}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
         <div className="my-10">
           <div className="flex bg-[#111111] rounded-xl  max-w-[380px] max-[550px]:max-w-[250px] mx-auto">
             <button
